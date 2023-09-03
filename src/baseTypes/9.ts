@@ -2,7 +2,15 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 
-const page1 = {
+type Union = {
+  title: string,
+  likes: number,
+  accounts: string[],
+  status: 'open' | 'close',
+  details?:{createAt: Date, updateAt: Date}
+
+}
+const page1:Union = {
   title: 'The awesome page',
   likes: 100,
   accounts: ['Max', 'Anton', 'Nikita'],
@@ -13,11 +21,11 @@ const page1 = {
   }
 }
 
-const page2 = {
-  title: 'Python or Js',
+const page2: Union = {
+  title: "Python or Js",
   likes: 5,
-  accounts: ['Alex'],
-  status: 'close',
-}
+  accounts: ["Alex"],
+  status: "close",
+};
 
 export {};
