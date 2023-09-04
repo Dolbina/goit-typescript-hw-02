@@ -13,6 +13,6 @@ enum DayWeeks{
 }
 
 function isWeekend(day: DayWeeks): boolean {
-  if (day === DayWeeks.SAT || day === DayWeeks.SUN) { return true }
-  else return false;
+return day === DayWeeks.SAT || day === DayWeeks.SUN
+  
 }

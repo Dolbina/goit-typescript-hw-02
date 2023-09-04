@@ -5,7 +5,8 @@
 
 function getPromise <T extends Array<string|number>>(array:T) {
   return new Promise<T>((resolve) => {
-    resolve(array);
+    resolve(array as T); 
+   
   });
 }
 
